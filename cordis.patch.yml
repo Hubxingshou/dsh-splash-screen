@@ -1,0 +1,15 @@
+# dsh-splash-screen — 只插入一行宿主插件。
+#
+# 浏览器半不需要单独登记：包的 package.json 里 dsh.client 声明了它，
+# dsh-client-modules 会像加载内置 ui-* 包一样加载 ./client.js。
+#
+# 想改参数时，在你的 profile cordis.patch.yml 里按 id 覆盖（整份 config 会被替换，
+# 插件自身对缺省字段有默认值）：
+#
+#   - id: splash
+#     config:
+#       holdMs: 900
+#       quietSeconds: 0
+- insert:
+    - id: splash
+      name: 'dsh-splash-screen'

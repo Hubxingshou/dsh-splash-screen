@@ -1,0 +1,62 @@
+{
+  "name": "dsh-splash-screen",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness 开屏动画：页面首帧播放一段纯 CSS/SVG 动画，界面就绪后淡出；10 个动画可切换，不改写宿主主题，卸载无残留。",
+  "type": "module",
+  "license": "MIT",
+  "author": "giteexiaobai",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giteexiaobai/dsh-splash-screen.git"
+  },
+  "homepage": "https://github.com/giteexiaobai/dsh-splash-screen#readme",
+  "bugs": {
+    "url": "https://github.com/giteexiaobai/dsh-splash-screen/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "splash",
+    "opening-animation",
+    "boot-animation",
+    "theme-neutral",
+    "开屏"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "src",
+    "cordis.patch.yml",
+    "locale",
+    "icon.svg",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    },
+    "engines": {
+      "dsh": ">=0.2.0"
+    }
+  }
+}

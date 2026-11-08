@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Splash Animation",
+    "description": "Shows a mark on the app's first frame and fades it out once the UI is ready. Never rewrites the theme; leaves nothing behind."
+  }
+}
